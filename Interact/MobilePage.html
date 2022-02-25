@@ -1,0 +1,942 @@
+<div class="content">
+    <style>.activity05_form {
+        background: #ffffff;
+        padding: 20px 0;
+        background: url("//static.91convert.com/template/image/activity05_formbg.jpg") center center no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+    }
+
+    .activity05_form *:after,
+    .activity05_form *:before {
+        box-sizing: border-box;
+    }
+
+    .activity05_form .conditional-field-dummy-btn {
+        display: none;
+        background-color: #1890ff;
+        border: #1890ff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+        height: 32px;
+        width: 30%;
+        color: white;
+        font-size: 14px;
+        border-radius: 5px;
+        margin-left: 35%;
+        margin-top: 1em;
+    }
+
+    .activity05_form .measurement {
+        margin-top: 10px;
+        padding: 0 15px;
+    }
+
+    .activity05_form .measurement input[type='range'] {
+        width: 100%;
+        white-space: nowrap;
+        position: initial;
+        vertical-align: 24px;
+        overflow: hidden;
+        height: 1em;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .activity05_form .measurement input[type='range'],
+    .activity05_form .measurement input[type='range']::-webkit-slider-thumb,
+    .activity05_form .measurement input[type='range']::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+    }
+
+    .activity05_form .measurement input[type='range']:focus {
+        outline: none;
+    }
+
+    .activity05_form .measurement input[type='range']::-webkit-slider-thumb {
+        margin-top: -0.25em;
+        border: none;
+        width: 2em;
+        height: 1em;
+        border-radius: 0.25em;
+        background: #e99120;
+    }
+
+    .activity05_form .measurement input[type='range']::-moz-range-thumb {
+        margin-top: 0em;
+        border: none;
+        width: 2em;
+        height: 1em;
+        border-radius: 0.25em;
+        background: #e99120;
+    }
+
+    .activity05_form .measurement input[type='range']::-moz-range-progress {
+        height: 0.5em;
+        border-radius: 0.25em;
+        box-shadow: inset 0 1px #999999, inset 0 1px 0.125em #555555, inset 0 -1px 0.125em #cccccc;
+        background: #021532;
+    }
+
+    .activity05_form .ui-slider-pip {
+        color: #858689;
+    }
+
+    .activity05_form .ui-slider-pip[class*='ui-slider-pip-initial'] {
+        font-weight: normal;
+    }
+
+    .activity05_form .ui-slider-pip[class*='ui-slider-pip-selected'] {
+        color: red !important;
+    }
+
+    .activity05_form .ui-slider-pip:not(.ui-slider-disabled).ui-slider-pip:hover .ui-slider-label {
+        color: red !important;
+    }
+
+    .activity05_form .ui-slider-line {
+        display: none;
+    }
+
+    .activity05_form .ui-slider-handle {
+        border: none;
+        background-color: #e99120;
+        top: -0.2em;
+        height: 0.9em;
+    }
+
+    .activity05_form .ui-slider-handle.ui-state-hover {
+        background-color: #e99120;
+    }
+
+    .activity05_form .ui-slider {
+        background-color: #021532;
+    }
+
+    .activity05_form .ui-field-contain {
+        border: none;
+        width: 100%;
+        height: 0.5em;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    .activity05_form .option-with-companion-button .companion-button {
+        width: 90%;
+        margin-left: 5%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        border: solid 1px #dcdcdc;
+        color: #e99120;
+    }
+
+    .activity05_form .option-with-companion-button input:checked + .companion-button {
+        background-color: #e99120;
+    }
+
+    .activity05_form .range-text {
+        font-size: 12px;
+        vertical-align: 24px;
+        display: inline-block;
+        width: 12%;
+        min-width: 56px;
+    }
+
+    .activity05_form .range-text.start {
+        float: left;
+    }
+
+    .activity05_form .range-text.end {
+        float: right;
+        text-align: right;
+    }
+
+    .activity05_form textarea {
+        resize: vertical;
+    }
+
+    .activity05_form .container {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        padding: 0 15px;
+    }
+
+    .activity05_form .field-block {
+        margin: 10px 0 20px 0;
+        position: relative;
+        clear: both;
+    }
+
+    #frame .activity05_form .field-block:not(.frame-static):hover {
+        outline: 1px dashed #ccc;
+        cursor: move;
+    }
+
+    #frame .activity05_form .field-block:not(.frame-static):hover:after {
+        background-color: rgba(233, 145, 32, 0.3);
+    }
+
+    #frame .activity05_form .field-block:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+    }
+
+    .activity05_form .field-block .field-content {
+        display: block;
+        overflow: hidden;
+    }
+
+    .activity05_form .field-block .field-content .option-container-vertical .select {
+        min-width: 100%;
+    }
+
+    .activity05_form .field-block .field-content .option-container-horizontal .select {
+        padding-right: 1%;
+        min-width: 32.33%;
+    }
+
+    .activity05_form .field-block .field-other-option {
+        margin-top: 10px;
+        display: none;
+    }
+
+    .activity05_form .field-block .title-line {
+        margin-bottom: 5px;
+    }
+
+    .activity05_form .field-block .title-text {
+        color: #e99120;
+        font-size: 14px;
+        font-weight: normal;
+        display: inline-block;
+        word-break: break-all;
+        word-break: break-word;
+        line-height: 1em;
+        vertical-align: baseline;
+    }
+
+    .activity05_form .field-block.asterisk:before {
+        content: '*';
+        position: absolute;
+        left: -15px;
+        color: #ff5a54;
+        top: 0;
+        font-size: 15px;
+    }
+
+    .activity05_form .field-block .desc {
+        color: #e99120 !important;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 10px;
+        word-break: break-all;
+    }
+
+    .activity05_form .field-block .code-field {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .activity05_form .field-block .other-select {
+        display: flex;
+        align-items: center;
+    }
+
+    .activity05_form .options-container {
+        background: #fff;
+        width: 100%;
+        height: 34px;
+        overflow: hidden;
+        border: solid 1px #dcdcdc;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .activity05_form .options-container:after {
+        content: '';
+        position: absolute;
+        border: 3px solid #e99120;
+        transform: rotate(45deg) translate(-50%);
+        border-top-color: transparent;
+        border-left-color: transparent;
+        margin-left: -15px;
+        top: 50%;
+        margin-top: -3px;
+    }
+
+    .activity05_form .options-container .option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+        color: #e99120 !important;
+        width: 100%;
+        height: 32px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        box-sizing: border-box;
+        outline: none;
+        text-indent: 10px;
+    }
+
+    .activity05_form .options-container .option option {
+        color: initial;
+    }
+
+    .activity05_form .options:focus {
+        border-color: #0fc3fe;
+    }
+
+    .activity05_form .options-container:focus {
+        border-color: #0fc3fe;
+    }
+
+    .activity05_form .text-input {
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        border: 1px solid #dcdcdc;
+        background: #fff;
+        height: 34px;
+        line-height: 1.5;
+        width: 100%;
+        font-size: 14px;
+        color: #444;
+        appearance: button;
+        -moz-appearance: button;
+        -webkit-appearance: button;
+        box-sizing: border-box;
+        outline: none;
+        padding: 10px 5px 10px 10px;
+    }
+
+    .activity05_form .text-input:focus {
+        border-color: #0fc3fe;
+    }
+
+    .activity05_form textarea.text-input {
+        min-height: 75px;
+    }
+
+    .activity05_form input[type='date']:before,
+    .activity05_form input[type='datetime-local']:before {
+        content: attr(placeholder);
+    }
+
+    .activity05_form .select {
+        display: inline-block;
+        margin: 5px 0;
+        float: left;
+        min-width: 100%;
+        position: relative;
+    }
+
+    .activity05_form .select .option-label-container {
+        float: left;
+    }
+
+    .activity05_form .select .option-image {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .activity05_form .select .option-image .option-label {
+        float: none;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 24px;
+        color: #e99120 !important;
+        padding: 3%;
+        word-break: break-all;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        box-sizing: border-box;
+        right: 0;
+    }
+
+    .activity05_form .select .option-image img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .activity05_form .select .option-label {
+        font-size: 14px;
+        font-weight: normal;
+        color: #e99120 !important;
+        float: left;
+        box-sizing: border-box;
+        margin-left: 25px;
+        line-height: 24px;
+    }
+
+    .activity05_form .select .option-label p {
+        display: inline-block;
+    }
+
+    .activity05_form .select .other-input {
+        float: left;
+        margin-left: 5px;
+        margin-top: -7px;
+    }
+
+    .activity05_form .select .checkbox {
+        display: none;
+        width: 0;
+    }
+
+    .activity05_form .select .checkbox:checked + .checkboxInput:after {
+        content: '';
+        width: 7px;
+        height: 10px;
+        position: absolute;
+        border: 2px solid #ffffff;
+        transform: rotate(45deg);
+        border-top-color: transparent;
+        border-left-color: transparent;
+        margin-top: -1px;
+        margin-left: 2px;
+    }
+
+    .activity05_form .select .checkbox:checked + .checkboxInput:before {
+        content: '';
+        background: #e99120;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+    }
+
+    .activity05_form .select .checkboxInput {
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 10px auto auto;
+    }
+
+    .activity05_form .select .checkbox:checked + .option-image:before {
+        content: '';
+        position: absolute;
+        border-color: #e99120 #e99120 transparent transparent;
+        border-width: 15px;
+        border-style: solid;
+        right: 0;
+        top: 0;
+    }
+
+    .activity05_form .select .checkbox:checked + .option-image:after {
+        content: '';
+        position: absolute;
+        right: 4px;
+        top: 0;
+        color: #e7f514;
+        border: 3px solid;
+        width: 7px;
+        height: 15px;
+        transform: rotate(45deg);
+        border-color: transparent #fff #fff transparent;
+    }
+
+    .activity05_form .select .checkbox:checked + .option-image img {
+        outline: 3px solid #e99120;
+        box-shadow: 0px 0px 10px #e99120;
+        filter: alpha(opacity=70);
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+    }
+
+    .activity05_form .select .radio {
+        display: none;
+    }
+
+    .activity05_form .select .radioInput {
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 100%;
+        display: block;
+        height: 14px;
+        width: 14px;
+        line-height: 1;
+        position: absolute;
+        left: 0;
+        box-sizing: border-box;
+        top: 0;
+        bottom: 0;
+        margin: auto 10px auto auto;
+    }
+
+    .activity05_form .select .radio:checked + .radioInput:after {
+        border: 1px solid rgba(233, 145, 32, 0.1);
+        background: #e99120;
+        border-radius: 100%;
+        content: '';
+        display: block;
+        height: 8px;
+        width: 8px;
+        margin: 2px 0 0 2px;
+        box-sizing: border-box;
+    }
+
+    .activity05_form .select .radio:checked + .option-image:before {
+        content: '';
+        position: absolute;
+        border-color: #e99120 #e99120 transparent transparent;
+        border-width: 15px;
+        border-style: solid;
+        right: 0;
+        top: 0;
+    }
+
+    .activity05_form .select .radio:checked + .option-image:after {
+        content: '';
+        position: absolute;
+        right: 4px;
+        top: 0;
+        color: #e7f514;
+        border: 3px solid;
+        width: 7px;
+        height: 15px;
+        transform: rotate(45deg);
+        border-color: transparent #fff #fff transparent;
+    }
+
+    .activity05_form .select .radio:checked + .option-image img {
+        outline: 3px solid #e99120;
+        box-shadow: 0px 0px 10px #e99120;
+        filter: alpha(opacity=70);
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+    }
+
+    .activity05_form .tel-input {
+        vertical-align: middle;
+        -moz-border-radius: 2px 0 0 2px;
+        -webkit-border-radius: 2px 0 0 2px;
+        border-radius: 2px 0 0 2px;
+        border: 1px solid #dcdcdc;
+        border-right: 0px;
+        background: #fff;
+        height: 34px;
+        width: 60%;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #444;
+        appearance: button;
+        -moz-appearance: button;
+        -webkit-appearance: button;
+        box-sizing: border-box;
+        padding: 10px 5px 10px 10px;
+    }
+
+    .activity05_form #clGetCodeBtn {
+        width: 40%;
+        background: #e99120;
+        height: 34px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 30px;
+        border: 1px solid #e99120;
+        -moz-border-radius: 0 2px 2px 0;
+        -webkit-border-radius: 0 2px 2px 0;
+        border-radius: 0 2px 2px 0;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        border-right: 3px;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+
+    .activity05_form #clGetCodeBtn:disabled {
+        background-color: #bdbdbd;
+        border-color: #bdbdbd;
+        cursor: not-allowed;
+    }
+
+    .activity05_form #clSubmitForm {
+        width: 60%;
+        background: #e99120;
+        color: #e99120 !important;
+        font-size: 14px !important;
+        font-weight: normal;
+        border: 1px solid #e99120;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        text-align: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0.1em;
+    }
+
+    .activity05_form #clSubmitForm:disabled {
+        background-color: #bdbdbd;
+        border-color: #bdbdbd;
+        cursor: not-allowed;
+    }
+
+    .activity05_form .pagination-button-group {
+        width: 100%;
+        padding: 10px 0;
+        display: block;
+    }
+
+    .activity05_form .pagination-button-group .rule-form-button {
+        background: #e99120;
+        color: #e99120;
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid #e99120;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0.1em;
+        width: 20%;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .activity05_form .pagination-button-group .rule-form-button#ruleFormPrev {
+        margin-left: 5%;
+        margin-right: 25%;
+    }
+
+    .activity05_form .pagination-button-group .rule-form-button#ruleFormNext {
+        margin-left: 25%;
+    }
+
+    .activity05_form .hidden-field {
+        visibility: visible;
+        position: relative;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .activity05_form .hidden-field:before {
+        content: '\f023';
+        position: absolute;
+        left: -15px;
+        color: #ff5a54;
+        top: 4px;
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+
+    .activity05_form .hidden-field.asterisk:after {
+        top: 15px;
+    }
+
+    #preview + div #frame_wp .activity05_form .hidden-field {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .activity05_form .rate.rating-container {
+        position: relative;
+        z-index: 0;
+        height: 22.5px;
+        padding: 0;
+        margin: 0;
+        word-spacing: -4px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .activity05_form .rate.rating-container > input:first-child {
+        display: none;
+    }
+
+    .activity05_form .rate.rating-container polygon {
+        stroke: #ffffff;
+        fill: #e99120;
+    }
+
+    .activity05_form .rate .shape {
+        position: absolute;
+        display: inline-block;
+        margin-left: -30px;
+        width: 30px;
+        height: 22.5px;
+        z-index: -1;
+    }
+
+    .activity05_form .rate .star polygon {
+        stroke: #ffffff;
+        fill: #e99120;
+    }
+
+    .activity05_form .rate .thumb path {
+        stroke: #ffffff;
+        stroke-width: 1em;
+        fill: #e99120;
+    }
+
+    .activity05_form .rate input {
+        width: 30px;
+        height: 22.5px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .activity05_form .rate input:not(.plain-radio) {
+        opacity: 0;
+    }
+
+    .activity05_form .rate input:checked ~ .star polygon {
+        fill: #ffffff;
+        stroke: #e99120;
+    }
+
+    .activity05_form .rate input:checked ~ .thumb path {
+        fill: #ffffff;
+        stroke: #e99120;
+    }
+
+    .activity05_form .rate input:checked + .star polygon {
+        stroke: #ffffff;
+        fill: #e99120;
+    }
+
+    .activity05_form .rate input:checked + .thumb path {
+        stroke: #ffffff;
+        fill: #e99120;
+    }
+
+    .activity05_form .sortable-placeholder {
+        background-color: rgba(233, 145, 32, 0.3);
+    }
+
+    #frame .activity05_form .frame-hide-submit-button {
+        display: none;
+    }
+
+    @media screen and (max-width: 375px) {
+        .activity05_form .rate input {
+            width: 24px;
+        }
+
+        .activity05_form .rate .shape {
+            margin-left: -24px;
+            width: 24px;
+        }
+
+        .activity05_form .select .other-input {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .activity05_form .tel-input {
+            width: 60%;
+            height: 34px;
+        }
+
+        .activity05_form #clGetCodeBtn {
+            width: 40%;
+            height: 34px;
+        }
+
+        .activity05_form .options-container {
+            width: 100%;
+            padding: 3px 0 2px 0;
+        }
+
+        .activity05_form .rate input {
+            width: 15px;
+        }
+
+        .activity05_form .rate .shape {
+            margin-left: -15px;
+            width: 15px;
+        }
+
+        .activity05_form .select .other-input {
+            margin-top: 0;
+        }
+    }
+
+    .activity05_form .field-block {
+        margin: 10px 0 20px 0;
+    }
+
+    .activity05_form .field-block .desc {
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+
+    .activity05_form .container {
+        width: 80%;
+    }
+
+    .activity05_form .options-container {
+        background: #fff;
+        background-size: 5% 40%;
+        background-position: 97% 50%;
+        width: 100%;
+        height: 34px;
+        overflow: hidden;
+        border: none;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    .activity05_form .options-container .option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+        color: #444;
+        width: 100%;
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .activity05_form .text-input {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        border: none;
+        background: #fff;
+        color: #666;
+        outline: none;
+    }
+
+    .activity05_form .select .option-label {
+        color: #fff;
+    }
+
+    .activity05_form .tel-input {
+        -moz-border-radius: 3px 0 0 3px;
+        -webkit-border-radius: 34px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+        border: none;
+    }
+
+    .activity05_form #clGetCodeBtn {
+        -moz-border-radius: 0 3px 3px 0;
+        -webkit-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .activity05_form #clSubmitForm {
+        font-size: 16px;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+    </style>
+    <script>
+        // Read a page's GET URL variables and return them as an associative array.
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        var str ='fasdf';
+
+        var params = getUrlVars();
+        if(params.cl_sr==='shows'){
+            $("#clForm").show();
+        }else{
+            //As an HTTP redirect (back button will not work )
+            // window.location.replace("http://www.google.com");
+
+//like if you click on a link (it will be saved in the session history,
+//so the back button will work as expected)
+//             window.location.href = "https://host.convertlab.com/page/2610693176412577965/6ab49b0bfca1422b89a04a34420d4c3d";
+        }
+
+        $(document).ready(function () {
+            $("#clForm").hide();
+        });
+    </script>
+
+    <form data-id="clForm" method="post" class="activity05_form" data-background-color="true"
+          data-background-image="true">
+        <div class="basics_form">
+            <div class="container">
+                <div id="formFieldSet">
+                    <ul>
+                        <div class="field-block asterisk" style="vertical-align: text-bottom;">
+                            <div>
+                                <div class="title-line">
+                                    <div class="title-text"><p>LHH推广人状态</p></div>
+                                </div>
+                                <div class="desc"><p></p></div>
+                            </div>
+                            <div class="field-content">
+                                <div class="options-container"><select class="option" name="attr42" depth="0">
+                                    <option value="" selected="">为后续有效推广，请提交7天有效</option>
+                                    <option uuid="1097138d-e5c9-4f64-8a5d-570b5b0dacb3" value="7天有效">7天有效</option>
+                                </select></div>
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="field-block frame-static" style="vertical-align: text-bottom;">
+                        <div></div>
+                        <div class="field-content">
+                            <div id="clSubmitForm" class="submit-button">提交</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-anchor"></div>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $("#clForm").append('<input type=text class="input" id=tb' + 1 + ' ' +
+            'value="Text Element ' + 33 + '" />');
+    });
+</script>
